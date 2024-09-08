@@ -45,6 +45,16 @@
             window.location.href = "next-page.html"; // Replace with the next page
         }
     </script>
-
+    
+    <script>
+    const sadMessages = ["No? 😢", "Are you sure? 😭", "Why no? 😞"];
+    const noButton = document.getElementById("noButton");
+    
+    noButton.addEventListener("click", function() {
+        const randomMessage = sadMessages[Math.floor(Math.random() * sadMessages.length)];
+        noButton.textContent = randomMessage;
+    });
+</script>
+    
 </body>
 </html>
