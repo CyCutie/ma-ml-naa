@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blablabla</title></title>
+    <title>blablabla</title>
     <style>
         body {
             text-align: center;
@@ -18,12 +18,13 @@
 <body>
 
     <h1>helo maryan, ml ta hehe</h1>
-    <button onclick="noButton()">nd ko</button>
+    <button onclick="showNo()">nd ko</button> <!-- Fixed here -->
     <button onclick="showYes()">tatata</button>
 
     <div id="no-buttons"></div>
 
     <script>
+        // Function to show more "No" buttons and sad meme
         function showNo() {
             const noButtons = document.getElementById("no-buttons");
             const newNo = document.createElement("button");
@@ -39,7 +40,8 @@
             noButtons.appendChild(sadImage);
         }
 
-      function showYes() {
+        // Function for when "Yes" is clicked
+        function showYes() {
             alert("sure??:>");
             // Redirect to the cute page or another message
             window.location.href = "next-page.html"; // Replace with the next page
@@ -47,14 +49,15 @@
     </script>
     
     <script>
+        // Randomized sad messages for "No" button
         const sadMessages = ["No? 😢", "Are you sure? 😭", "Why no? 😞"];
-        const noButton = document.getElementById("noButton");
-    
-    noButton.addEventListener("click", function() {
-        const randomMessage = sadMessages[Math.floor(Math.random() * sadMessages.length)];
-        noButton.textContent = randomMessage;
-    });
-</script>
+        const noButton = document.querySelector("button[onclick='showNo()']"); // Select the first "No" button
+
+        noButton.addEventListener("click", function() {
+            const randomMessage = sadMessages[Math.floor(Math.random() * sadMessages.length)];
+            noButton.textContent = randomMessage;
+        });
+    </script>
     
 </body>
 </html>
