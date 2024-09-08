@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blablabla</title></title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        #no-buttons {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>helo maryan, ml ta hehe</h1>
+    <button onclick="showNo()">nd ko</button>
+    <button onclick="showYes()">tatata</button>
+
+    <div id="no-buttons"></div>
+
+    <script>
+        function showNo() {
+            const noButtons = document.getElementById("no-buttons");
+            const newNo = document.createElement("button");
+            newNo.textContent = "nd ko";
+            newNo.onclick = showNo;
+            noButtons.appendChild(newNo);
+
+            // Optional: Insert sad meme images or texts
+            const sadImage = document.createElement("img");
+            sadImage.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi5YSEFFOsmwGB0N7_ioz6pBmYvGfccKZDADnNg7_29g&s"; // Replace this with a real meme image link
+            sadImage.alt = "Sad Meme";
+            sadImage.style.width = "150px";
+            noButtons.appendChild(sadImage);
+        }
+
+      function showYes() {
+            alert("sure??:>");
+            // Redirect to the cute page or another message
+            window.location.href = "next-page.html"; // Replace with the next page
+        }
+    </script>
+
+</body>
+</html>
